@@ -41,6 +41,7 @@ Décomposons :
 2. L'arobase `@` n'a pas besoin d'être échappé (ce n'est pas un caractère spécial)
 3. `[a-z]+\.[a-z]{2,3}` est la regex du nom de domaine vue avant
 
+
     const regexEmail = /[a-z.]+@[a-z]+\.[a-z]{2,3}/
     console.log('google.fr est une adresse email?', regexEmail.test('google.fr'))
     console.log('joe@google.fr est une adresse email?', regexEmail.test('joe@google.fr'))
@@ -59,11 +60,12 @@ Décomposition de la regex:
 5. Un autre espace ` `
 6. Une année en 4 chiffres avec `[0-9]{4}`
 
+
     // Syntaxe new RegExp()
     const regexDate = new RegExp('^[0-9]{1,2} [A-Za-z]+ [0-9]{4}')
     // C'est exactement la même chose que de mettre des //
     const regexDateLitterale = /^[0-9]{1,2} [A-Za-z]+ [0-9]{4}/
-
+    //
     console.log('23 avril 2018 est une date?', regexDate.test('23 avril 2018'))
     console.log('21 janvier 218 est une date?', regexDate.test('21 janvier 218'))
     console.log('231 janvier 2022 est une date?', regexDateLitterale.test('231 janvier 2022'))
