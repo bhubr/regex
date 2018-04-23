@@ -20,14 +20,18 @@ On peut la décomposer en 3 parties :
 
 On peut écrire la regex soit avec la syntaxe `/regex/`, soit avec `new RegExp('regex')`.
 
-Exemple 1 avec l'expression pour reconnaître un nom de domaine, donnée ci-dessus:
+### Exemple 1 - Reconnaître un nom de domaine
+
+On reprend l'expression donnée ci-dessus:
 
     const regexDomaine = /[a-z]+\.[a-z]{2,3}/
     console.log('google.fr est un nom de domaine?', regexDomaine.test('google.fr'))
     console.log('reactjs.org est un nom de domaine?', regexDomaine.test('reactjs.org'))
     console.log('mydomain.o est un nom de domaine?', regexDomaine.test('reactjs.org'))
 
-Exemple 2 avec une expression (simplifiée) pour reconnaître un email :
+###Exemple 2 - Trouver un email
+
+Voici une expression pour reconnaître un email (le pire c'est qu'elle est simplifiée !) :
 
     [a-z0-9.]+\@[a-z]+\.[a-z]{2,3}
 
@@ -43,7 +47,9 @@ Décomposons :
     console.log('captain.america@avengers.com est une adresse email?', regexEmail.test('captain.america@avengers.com'))
     console.log('captain.america#avengers.com est une adresse email?', regexEmail.test('captain.america#avengers.com'))
 
-Exemple 3 avec la syntaxe `new Regexp()` et l'expression `^[0-9]{1,2} [A-Za-z]+ [0-9]{4}` qui permet de matcher une date en toutes lettres comme `23 avril 2018`.
+### Exemple 3 - Reconnaître une date
+
+Dans ce 3ème exemple, on montre la syntaxe `new Regexp()`, et on utilise l'expression `^[0-9]{1,2} [A-Za-z]+ [0-9]{4}`, qui permet de matcher une date en toutes lettres comme `23 avril 2018`.
 
 Décomposition de la regex:
 1. Le caractère `^` permet d'exiger que la chaîne à tester *commence par* ce qui vient après.
