@@ -29,7 +29,7 @@ On reprend l'expression donnée ci-dessus:
     console.log('reactjs.org est un nom de domaine?', regexDomaine.test('reactjs.org'))
     console.log('mydomain.o est un nom de domaine?', regexDomaine.test('reactjs.org'))
 
-###Exemple 2 - Trouver un email
+### Exemple 2 - Trouver un email
 
 Voici une expression pour reconnaître un email (le pire c'est qu'elle est simplifiée !) :
 
