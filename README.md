@@ -41,6 +41,7 @@ Décomposons :
 2. L'arobase `@` n'a pas besoin d'être échappé (ce n'est pas un caractère spécial)
 3. `[a-z]+\.[a-z]{2,3}` est la regex du nom de domaine vue avant
 
+En JS :
 
     const regexEmail = /[a-z.]+@[a-z]+\.[a-z]{2,3}/
     console.log('google.fr est une adresse email?', regexEmail.test('google.fr'))
@@ -60,6 +61,7 @@ Décomposition de la regex:
 5. Un autre espace ` `
 6. Une année en 4 chiffres avec `[0-9]{4}`
 
+En JS :
 
     // Syntaxe new RegExp()
     const regexDate = new RegExp('^[0-9]{1,2} [A-Za-z]+ [0-9]{4}')
